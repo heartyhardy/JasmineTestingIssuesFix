@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row">
+    <button class="btn-del" (click)='OnDelRequest()' [disabled]='(isDelRequested)?true:false'>Delete</button>
+  </div>
+  <div class="confirm" *ngIf="(isDelRequested)?true:false">
+    <div class="do-confirm">Delete ?</div>
+    <button class="btn-cancel-del" (click)="OnCancelRequest()">Cancel</button>
+  </div>
+</div>
